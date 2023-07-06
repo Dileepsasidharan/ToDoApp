@@ -10,6 +10,7 @@
 <table class="table">
     <tr>
         <th> Sl no</th>
+        <th>Name</th>
         <th>TodO</th>
         <th>Date</th>
         <th>Update</th>
@@ -18,6 +19,7 @@
     {% for i in data %}
     <tr>
         <td> {{forloop.counter}}</td>
+        <td>{{i.names}}</td>
         <td> {{i.notes}}</td>
         <td> {{i.dates}}</td>
         <td><a href="{% url 'update_todo' i.id %}" class="btn btn-success">Update</a></td>
